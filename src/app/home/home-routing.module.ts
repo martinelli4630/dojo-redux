@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CounterComponent } from './counter/counter.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [RouterModule.forChild([
     {
       path: '',
-      component: CounterComponent,
+      component: HomeComponent,
     },
   ])],
   exports: [RouterModule]
 })
-export class CounterRoutingModule { }
+export class HomeRoutingModule { }

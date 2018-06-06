@@ -6,10 +6,14 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule.forRoot(
     [
       {
+        path: 'home',
+        loadChildren: 'app/home/home.module#HomeModule'
+      },
+      {
         path: 'counter',
         loadChildren: 'app/counter/counter.module#CounterModule'
       },
-      { path: '**', redirectTo: 'counter' }
+      { path: '**', redirectTo: 'home' }
     ])
   ],
   exports: [RouterModule]
