@@ -10,7 +10,10 @@ import { StoreModule, MetaReducer } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
-import 'rxjs/Rx';
+import {
+  MatIconModule
+} from '@angular/material';
+import 'rxjs';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import 'rxjs/Rx';
     ReactiveFormsModule,
     HttpModule,
     BrowserAnimationsModule,
+
+    // Material
+    MatIconModule,
 
     StoreModule.forRoot(rootReducer, { metaReducers }),
     EffectsModule.forRoot([]),
