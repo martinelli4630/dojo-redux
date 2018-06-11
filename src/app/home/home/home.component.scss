@@ -14,5 +14,9 @@
     align-items: center;
     justify-content: center;
     height: 5rem;
+    button {
+      min-width: 8rem;
+      margin: 0.5rem;
+    }
   }
 }

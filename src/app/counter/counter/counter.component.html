@@ -1,11 +1,12 @@
 <div class="container">
 
+  <h2>{{ counter$ | async }}</h2>
   <div class="button-box">
-    <button mat-icon-button color="warn">
-      <mat-icon aria-label="add">add</mat-icon>
-    </button>
-    <button mat-icon-button color="warn">
+    <button mat-fab color="warn" (click)="onDecrement()">
       <mat-icon aria-label="remove">remove</mat-icon>
+    </button>
+    <button mat-fab color="warn" (click)="onIncrement()">
+      <mat-icon aria-label="add">add</mat-icon>
     </button>
   </div>
 
