@@ -2,9 +2,9 @@
 
   <div class="input-box">
     <mat-form-field>
-      <input matInput placeholder="Add a note">
+      <input matInput placeholder="Add a note" [(ngModel)]="note" />
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="onSubmit()">
+    <button [disabled]="!note" mat-raised-button color="primary" (click)="onSubmit()">
       <mat-icon aria-label="add">add</mat-icon>
     </button>
   </div>
@@ -12,8 +12,8 @@
   <div class="list-box">
     <div class="list-item" *ngFor="let note of notes$ | async">
       <span>{{note.description}}</span>
-      <button mat-raised-button color="warn" (click)="onSubmit()">
-        <mat-icon aria-label="remove">remove</mat-icon>
+      <button mat-button color="warn" (click)="onDelete(note._id)">
+        <mat-icon aria-label="remove">delete</mat-icon>
       </button>
     </div>
   </div>
