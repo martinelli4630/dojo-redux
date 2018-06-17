@@ -47,7 +47,7 @@ export class LoadNoteFail implements Action {
 export class RemoveNote implements Action {
   readonly type = REMOVE_NOTE;
 
-  constructor(public note: string) {}
+  constructor(public id: string) {}
 }
 
 export class RemoveNoteSuccess implements Action {

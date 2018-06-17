@@ -19,6 +19,9 @@ import { FlexModule } from '@angular/flex-layout';
 import { UserRoutingModule } from './user-routing.module';
 import { FormComponent } from './form/form.component';
 import { ViewComponent } from './view/view.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import * as fromStore from './store';
 
 @NgModule({
   imports: [
@@ -37,10 +40,16 @@ import { ViewComponent } from './view/view.component';
     MatNativeDateModule,
     MatTableModule,
     FlexModule,
+
+    StoreModule.forFeature('user', fromStore.reducers),
+    EffectsModule.forFeature([...fromStore.effects])
   ],
   declarations: [
     ViewComponent,
     FormComponent
+  ],
+  providers: [
+    fromStore.UserService
   ]
 })
 export class UserModule { }

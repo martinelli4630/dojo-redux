@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import * as fromStore from '../store';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-form',
@@ -11,7 +13,8 @@ export class FormComponent implements OnInit {
   public userForm: FormGroup;
 
   constructor(
-    public fb: FormBuilder
+    public fb: FormBuilder,
+    private _store: Store<fromStore.UserState>
   ) { }
 
   ngOnInit() {
@@ -25,6 +28,6 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit() {
-
+    this._store.dispatch(new fromStore.AddUser(this.userForm.value));
   }
 }

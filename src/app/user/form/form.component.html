@@ -32,7 +32,7 @@
 
     <div class="btn-box" fxLayoutAlign="end start">
       <button fxFlex="10%" mat-raised-button color="primary" [routerLink]="['/user']">Back</button>
-      <button fxFlex="10%" type="submit" mat-raised-button color="primary">Save</button>
+      <button [disabled]="userForm.invalid" fxFlex="10%" type="submit" mat-raised-button color="primary">Save</button>
     </div>
   </form>
 

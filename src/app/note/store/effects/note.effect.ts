@@ -80,7 +80,7 @@ export class NoteEffects {
   removeNote$: Observable<Action> = this._actions$
     .ofType(fromActions.REMOVE_NOTE)
     .pipe(
-      map((action: fromActions.RemoveNote) => action.note),
+      map((action: fromActions.RemoveNote) => action.id),
       switchMap((id) => {
         return this._service
           .remove(id)
