@@ -14,7 +14,7 @@ import * as fromStore from './store';
 
     MatIconModule,
     MatButtonModule,
-    StoreModule.forFeature('counter', fromStore.reducers),
+    // StoreModule.forFeature('counter', fromStore.reducers),
   ],
   declarations: [CounterComponent]
 })

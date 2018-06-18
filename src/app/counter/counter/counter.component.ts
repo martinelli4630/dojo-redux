@@ -12,16 +12,14 @@ export class CounterComponent {
 
   public counter$: Observable<any>;
 
-  constructor(private _store: Store<fromStore.CounterState>) {
-    this.counter$ = this._store.select(fromStore.getCounter);
-  }
+  constructor() { }
 
   onIncrement() {
-    this._store.dispatch(new fromStore.Increment());
+
   }
 
   onDecrement() {
-    this._store.dispatch(new fromStore.Decrement());
+
   }
 
 }
