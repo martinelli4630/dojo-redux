@@ -17,10 +17,6 @@ import { RouterModule } from '@angular/router';
         path: 'note',
         loadChildren: 'app/note/note.module#NoteModule'
       },
-      {
-        path: 'user',
-        loadChildren: 'app/user/user.module#UserModule'
-      },
       { path: '**', redirectTo: 'home' }
     ])
   ],

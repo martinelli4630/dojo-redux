@@ -22,8 +22,8 @@ import * as fromStore from './store';
     MatButtonModule,
     MatIconModule,
 
-    StoreModule.forFeature('note', fromStore.reducers),
-    EffectsModule.forFeature([...fromStore.effects])
+    // StoreModule.forFeature('note', fromStore.reducers),
+    // EffectsModule.forFeature([...fromStore.effects])
   ],
   declarations: [NoteComponent],
   providers: [fromStore.NoteService]

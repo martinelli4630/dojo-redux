@@ -13,21 +13,17 @@ export class NoteComponent implements OnInit {
   public notes$: Observable<any>;
   public note;
 
-  constructor(private _store: Store<fromStore.NoteState>) {
-    this.notes$ = this._store.select(fromStore.getNotes);
-  }
+  constructor() { }
 
   ngOnInit() {
-    this._store.dispatch(new fromStore.LoadNote());
   }
 
   onSubmit() {
     const note = { description: this.note };
-    this._store.dispatch(new fromStore.AddNote(note));
+    // dispatch
     this.note = '';
   }
 
   onDelete(id) {
-    this._store.dispatch(new fromStore.RemoveNote(id));
   }
 }
