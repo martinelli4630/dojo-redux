@@ -1,27 +1,70 @@
-# DojoRedux
+<h1 align="center">Dojo Redux</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+>This repo serves an Angular 6 and Redux demo application. This application was built in order to share Redux knowledge among the development team. This application also contains a back-end service with "note" and "user" component rest endpoints 
 
-## Development server
+[Setup and install](#setup-and-install) | [Usage](#usage) 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Setup and install
 
-## Code scaffolding
+Your can fork this repo clone or simply download the `.zip` bundle with the contents inside.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Environment installation
 
-## Build
+To run this project you'll need development dependencies of which run on Node.js. You can skip this step if you already have Node.js installed. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+1. Download and install [Node.js](https://nodejs.org/en/download/) 
+2. Download and install [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+3.  Download and Install [Angular Cli](https://cli.angular.io/) 
 
-## Running unit tests
+#### Project installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ Clone the project from github
+```
+  https://github.com/mlassakoski/dojo-redux.git
+```
+Open a terminal and use `cd` to enter into directory where you clone the project.
+```
+cd <dojo-redux>
+yarn install
+OR
+npm install
+```
 
-## Running end-to-end tests
+## Usage 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Inside project directory execute:
+```
+yarn start 
+OR
+npm start
+```
+Go to `localhost:4200` to access the application.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+----------
+
+
+To run the back-end service open a new terminal and execute:
+
+```
+cd <server>
+yarn install
+OR
+npm install
+```
+After you finish installing the dependencies, execute:
+```
+yarn start 
+OR
+npm start
+```
+
+The back-end will be running at  `localhost:3000` 
+
+## Credits
+
+* Mauricio Lassakoski
+
+## License
+
+* MIT
